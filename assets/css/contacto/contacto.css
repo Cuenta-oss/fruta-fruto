@@ -1,0 +1,29 @@
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 350px;
+    justify-content: space-evenly;
+}
+
+.contacto__footer{
+    font-size: 1.2em;
+    color: var(--color_gray);
+}
+
+.contacto__title{
+    color: var(--color_gray);
+    font-size: 2em;
+}
+
+.contacto__img{
+    margin: 0 .5em;
+}
+
+@media screen and (min-width:1024px){
+    .contacto{
+        flex-direction: row;
+        height: 200px;
+        justify-content: space-around;
+    }
+}

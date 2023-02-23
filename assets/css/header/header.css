@@ -1,0 +1,133 @@
+:root {
+    --bg_image-banner: url("../../img/banner.png");
+    --color_white: #FFF;
+    --color_yellow: #fcab0881;
+    --color_black: #000000;
+    --color_red:#DA2B1F;
+    --color_gray: #8C8888;
+    --color_pink: #E5E5E5;
+
+    --roboto: 'Roboto';
+    --pacifico: 'Pacifico'
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: var(--bg_image-banner);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* backdrop-filter: 1px; */
+}
+
+.container__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    /* height: 20%; */
+}
+
+.container__img {
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+}
+
+.container__ul-list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 1rem;
+    font-family: var(--roboto);
+}
+
+.links {
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--color_white);
+    transition: all .5s ease;
+    border-radius: .5rem;
+    font-weight: bold;
+}
+
+.links:hover {
+    background-color: var(--color_yellow);
+}
+
+.abrir,
+.cerrar {
+    display: none;
+}
+
+.container__content {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--pacifico);
+    font-size: 3em;
+    color: var(--color_white);
+    text-shadow: 0 7px 4px var(--color_black);
+    /* font-weight: 400; */
+    text-align: center;
+}
+
+.container__section1{
+    background-color: aquamarine;
+    height: 100vh;
+}
+
+@media screen and (max-width:375px) {
+
+    .abrir,
+    .cerrar {
+        display: block;
+        background: none;
+        border: none;
+        outline: none;
+        font-size: 2.4rem;
+        color: var(--color_white);
+    }
+
+    .container__nav {
+        opacity: 0;
+        visibility: hidden;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgba(252, 10, 252);
+        bottom: 0;
+        left: 0;
+    }
+
+    .container__nav-visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+    .container__ul-list {
+        flex-direction: column;
+        text-align: center;
+        width: 100vw;
+    }
+
+    .links {
+        color: #FFFFFF;
+        width: 100vw;
+    }
+
+    .container__content{
+        font-size: 1.5em;
+    }
+}
